@@ -1,3 +1,0 @@
-<html lang="pt-BR"> <head> <meta content="origin" name="referrer">  <script nonce="2VHfVucpB8gOonCqznVLrw">window.google = {};(function(){
-var d=/^\s*(?!javascript:)(?:[\w+.-]+:|[^:/?#]*(?:[/?#]|$))/i;
-(this||self).google.navigateTo=function(a,c,b){!/\/.*?[&?]gsc=1/.test(c.location.href)&&a!==c&&a.google?a.google.r&&(a.google.r=0,a=a.location,b=d.test(b)?b:void 0,b!==void 0&&(a.href=b),c.location.replace("about:blank")):c.location.replace(b)};}).call(this);(function(){var redirectUrl='https://br.pinterest.com/jujumed/fotos-preto-e-branco/';google.navigateTo(parent,window,redirectUrl);})();</script> <noscript> <meta content="0;url=https://br.pinterest.com/jujumed/fotos-preto-e-branco/" http-equiv="refresh"> </noscript> </head>  </html>
