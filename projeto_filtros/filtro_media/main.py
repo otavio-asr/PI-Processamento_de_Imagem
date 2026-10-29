@@ -29,3 +29,4 @@ if __name__ == "__main__":
 
     cv2.imwrite("resultado_media_3x3.png", filtro_media(img, tamanho=3))
     cv2.imwrite("resultado_media_5x5.png", filtro_media(img, tamanho=5))
+    
