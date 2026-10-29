@@ -1,9 +1,16 @@
+import os
 import cv2
 import numpy as np
 
-img = cv2.imread('entrada.png', cv2.IMREAD_GRAYSCALE)
-hist, _ = np.histogram(img, bins=256, range=(0, 256))
 
+pasta = os.path.dirname(os.path.abspath(__file__))
+caminho = os.path.join(pasta, 'entrada.png')
+
+
+with open(caminho, 'rb') as f:
+    img = cv2.imdecode(np.asarray(bytearray(f.read()), dtype=np.uint8), cv2.IMREAD_GRAYSCALE)
+
+hist, _ = np.histogram(img, bins=256, range=(0, 256))
 hist_suave = np.convolve(hist, np.ones(5)/5, mode='same')
 
 pico1 = np.argmax(hist_suave)
@@ -21,4 +28,4 @@ _, binaria = cv2.threshold(img, limiar, 255, cv2.THRESH_BINARY)
 print(f"Picos detectados: {inicio} e {fim}")
 print(f"Limiar encontrado pelo método do vale: {limiar}")
 
-cv2.imwrite('segmentada_vale.png', binaria)
+cv2.imwrite(os.path.join(pasta, 'segmentada_vale.png'), binaria)
